@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background-color: #F9F8F6;
+  color: #1A1A1A;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cloud tile card style */
+.cloud-tile {
+  @apply bg-white rounded-2xl;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Floating input bar */
+.floating-input {
+  @apply bg-white/80 backdrop-blur-md rounded-2xl;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Soft button style */
+.btn-soft {
+  @apply px-4 py-2 rounded-xl transition-all duration-150;
+  background: #7C9082;
+  color: white;
+}
+.btn-soft:hover {
+  background: #6B7F71;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(124, 144, 130, 0.3);
+}
+.btn-soft:active {
+  background: #5A6E60;
+  transform: translateY(0);
+}
+
+/* Secondary button */
+.btn-secondary {
+  @apply px-4 py-2 rounded-xl transition-all duration-150;
+  background: transparent;
+  color: #4A4A4A;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Serif word display */
+.word-serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Star rating */
+.star-gold {
+  color: #C4A574;
+}
+
+/* Gentle shake animation for errors */
+@keyframes gentle-tilt {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+}
+.animate-tilt {
+  animation: gentle-tilt 0.3s ease-in-out;
+}
+
+/* Subtle pulse for loading states */
+@keyframes soft-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.animate-soft-pulse {
+  animation: soft-pulse 1.5s ease-in-out infinite;
+}
