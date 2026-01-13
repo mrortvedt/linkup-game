@@ -10,15 +10,15 @@ const config: Config = {
     extend: {
       colors: {
         paper: {
-          DEFAULT: "#F9F8F6",
-          warm: "#F5F3EF",
-          cool: "#F7F9FA",
+          DEFAULT: "#FCFAF8",
+          warm: "#FAF7F4",
+          cool: "#F8FAFA",
         },
         ink: {
-          DEFAULT: "#1A1A1A",
-          light: "#4A4A4A",
-          muted: "#8A8A8A",
-          faint: "#C5C5C5",
+          DEFAULT: "#2D2926",
+          light: "#5A5450",
+          muted: "#8A847E",
+          faint: "#D4D0CC",
         },
         matcha: {
           50: "#F4F7F5",

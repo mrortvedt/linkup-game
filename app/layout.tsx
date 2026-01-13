@@ -22,6 +22,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  interactiveWidget: "resizes-content",
 };
 
 export default function RootLayout({
@@ -31,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${dmSerifDisplay.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-paper text-ink font-sans">
+      <body className="min-h-dvh bg-paper text-ink font-sans">
         {children}
       </body>
     </html>
